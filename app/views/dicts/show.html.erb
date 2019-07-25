@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Eword:</strong>
+  <%= @dict.eword %>
+</p>
+
+<p>
+  <strong>Jword:</strong>
+  <%= @dict.jword %>
+</p>
+
+<p>
+  <strong>Jkana:</strong>
+  <%= @dict.jkana %>
+</p>
+
+<%= link_to 'Edit', edit_dict_path(@dict) %> |
+<%= link_to 'Back', dicts_path %>

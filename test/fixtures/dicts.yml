@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  eword: MyString
+  jword: MyString
+  jkana: MyString
+
+two:
+  eword: MyString
+  jword: MyString
+  jkana: MyString

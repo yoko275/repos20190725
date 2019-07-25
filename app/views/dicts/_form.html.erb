@@ -1,0 +1,32 @@
+<%= form_with(model: dict, local: true) do |form| %>
+  <% if dict.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(dict.errors.count, "error") %> prohibited this dict from being saved:</h2>
+
+      <ul>
+      <% dict.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :eword %>
+    <%= form.text_field :eword %>
+  </div>
+
+  <div class="field">
+    <%= form.label :jword %>
+    <%= form.text_field :jword %>
+  </div>
+
+  <div class="field">
+    <%= form.label :jkana %>
+    <%= form.text_field :jkana %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
