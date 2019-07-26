@@ -15,7 +15,7 @@ class ItdictBotController < ApplicationController
     case event.type
     when Line::Bot::Event::MessageType::Text
     msg = event.message['text']
-    id = msg.to_i
+    id = msg.to_s
     if find_dict(id)
     dict = find_dict(id)
     message = [{
