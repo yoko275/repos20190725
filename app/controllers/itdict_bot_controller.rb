@@ -34,10 +34,10 @@ class ItdictBotController < ApplicationController
                 #        text: "「#{dict.eword}」\n#{dict.jword}"
                 #        }]
                 #    else
-                        message = [{
-                        type: 'text',
-                        text: "該当なし"
-                        }]
+                        message = {
+                            type: 'text',
+                            text: "該当なし"
+                        }
                 #    end
                     client.reply_message(event['replyToken'], message)
                 end
