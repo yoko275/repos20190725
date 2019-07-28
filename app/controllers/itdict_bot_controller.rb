@@ -18,7 +18,7 @@ class ItdictBotController < ApplicationController
           when Line::Bot::Event::Message
               case event.type
               when Line::Bot::Event::MessageType::Text
-              #    msg = event.message['text']
+                  msg = event.message['text']
               #    id = msg.to_s
               #    if find_dict(id)
               #        dict = find_dict(id)
@@ -29,7 +29,8 @@ class ItdictBotController < ApplicationController
               #    else
                       message = {
                           type: 'text',
-                          text: "該当なし"
+                          text: msg
+                          #text: "該当なし"
                       }
               #    end
                   client.reply_message(event['replyToken'], message)
